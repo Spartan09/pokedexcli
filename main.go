@@ -1,17 +1,20 @@
 package main
 
 import (
-	"fmt"
+	"time"
+
+	"github.com/Spartan09/pokedexcli/internal/pokeapi"
 )
 
-
+type config struct {
+	pokeapiClient       pokeapi.Client
+	nextLocationAreaURL *string
+	prevLocationAreaURL *string
+}
 
 func main() {
-
-	for {
-		text := ""
-		fmt.Print(" > ")
-		fmt.Scan(&text)
-		fmt.Println("echoeing.. ", text)
+	cfg := config{
+		pokeapiClient: pokeapi.NewClient(time.Hour),
 	}
+	StartRepl(&cfg)
 }
