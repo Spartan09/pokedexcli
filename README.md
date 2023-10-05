@@ -1,6 +1,6 @@
 # Pokedex cli
 Usage:
- - map: Displays the names of next location areas in the Pokemon world.
+ -> map: Displays the names of next location areas in the Pokemon world.
  - mapb: Displays the names of previous location areas in the Pokemon world.
  - explore {location_area}: Lists the pokemon in the location area.
  - catch {pokemon_name}: Attempt to catch a pokemon and add it to your pokedex.
