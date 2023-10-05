@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"fmt"
-	"log"
 )
 
 func callbackExplore(cfg *config, args ...string) error {
@@ -15,7 +14,7 @@ func callbackExplore(cfg *config, args ...string) error {
 
 	locationArea, err := cfg.pokeapiClient.GetLocationArea(locationAreaName)
 	if err != nil {
-		log.Fatal(err)
+		return err
 	}
 
 	fmt.Printf("Pokemon in %s:\n", locationArea.Name)
